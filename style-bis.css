@@ -1,0 +1,119 @@
+:root{
+  --bg-color: #120A8F;
+  --orange:#FE9920;
+  --blanc: #FFFFFF;
+  --card-color: rgb(23,23,23);
+  cursor: url(assets/1x/Artboard1.png), auto;
+}
+
+body{
+  margin: 0;
+  padding: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  color: #333333;
+  background-color: bisque;
+}
+
+/* Header ----------------------------------------------------------------------------------------------*/ 
+
+/*-----title-----*/
+#Titre {
+  margin: auto;
+  font-size: xx-large;
+  color: var(--blanc);
+}
+
+
+
+/*-----barre du header-----*/
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0px 10px 12px var(--bg-color);
+}
+
+            /*------ pour faire en sorte que ça touche le bord -----*/
+body, header {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+
+/* switch------------*/
+
+#switch{
+    margin-top: 70px;
+    left: 50%;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 200px;
+	height: 100px;
+	background: var(--blanc);
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 90px;
+	height: 90px;
+	background: var(--bg-color);
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: var(--bg-color);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+  background: var(--blanc);
+}
+
+label:active:after {
+	width: 130px;
+}
+
+
+
+
+
+
+/* Footer ----------------------------------------------------------------------------------------------*/
+footer {
+    width: 100%;
+    z-index: 19;
+    overflow: hidden;
+    background-color: var(--bg-color);
+  }
+    
+  .footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    box-shadow: 0 0px 10px 12px var(--bg-color);
+  }
+    
