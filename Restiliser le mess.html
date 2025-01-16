@@ -5,70 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebsiteProjekt</title>
     <link rel="stylesheet" href="style-bis.css">
-    <link rel="JavaScript" href="sketch-bis.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body> 
 
-    
-<!-- JavaScript -->
-     <script src="sketch.js"></script>
+    <div class="side_bar">
+        ULTRAMARINE
+    </div>
 
+    <div class="dessin_menu"> 
+        <img src="assets/1x/IMAGE DE MENU.png" id="float-image">
+    </div>
 
-    <!-- Header -->
-    <nav>
-
-        <a id="Titre"> 
-            <i> Ultra</i>marine </a>
-         </a> 
-    
-    </nav>
+    <div id="focus_layer">
+        <img src="assets/Portfolio a la mano.png">
+    </div>
 
 
+    <div id="text_menu"> 
 
+        <H1> 
+            Salut, moi c'est 
+            <br> 
+            <span id=marine> Marine</span>
+        </H1>
+        <p>
+        Je coupe mes pommes en 12 parce que ça me donne l'impresison de manger plus de fruits
+<div class="boutons"> 
+    <a href="portfolio_page.html" id="portfolio">.img</a>
+    <a href="cv_page.html" id="CV">.CV</a>
+    <a href="contact_page.html" id="txt">.txt</a>
 
-
-
-
-    <!-- switch -->
- <div class="container-switch"> 
-    <input type="checkbox" id="switch" /><label for="switch">switch</label>
- </div>
-
-
-
-
-<!-- tentative carrousselle -->
-
-<div class="carrousel">
-	<div class="card" id="c0"></div>
-	<div class="card" id="c1"></div>
-	<div class="card" id="c2"></div>
-	<div class="card" id="c3"></div>
-	<div class="card" id="c4"></div>
-	<div class="card" id="c5"></div>
-	<div class="card" id="c6"></div>
-	<div class="card" id="c7"></div>
 </div>
 
+</style>
+</head>
+<body>
+  
+  <script>
+    const hoverTargetimg = document.getElementById('portfolio');
+
+    hoverTargetimg.addEventListener('mouseenter', () => {
+      document.body.style.backgroundColor = '#00006E';
+      marine.style.backgroundColor = '#6E6E6E';
+      marine.style.color = '#00006E';
+      text_menu.style.color = '#6E6E6E';
+      CV.style.backgroundColor = '#6E6E6E';
+      CV.style.color = '#00006E';
+      txt.style.backgroundColor = '#6E6E6E';
+      txt.style.color = '#00006E';
+      focus_layer.style.display='block';
+
+    
+    });
+
+    hoverTargetimg.addEventListener('mouseleave', () => {
+        document.body.style.backgroundColor = '';
+      marine.style.backgroundColor = '';
+      marine.style.color = '';
+      text_menu.style.color = '';
+      CV.style.backgroundColor = '';
+      CV.style.color = '';
+      txt.style.backgroundColor = '';
+      txt.style.color = ''
+      focus_layer.style.display='';
+    });
 
 
+  const hoverTargetcv = document.getElementById('CV');
+
+hoverTargetcv.addEventListener('mouseenter', () => {
+  document.body.style.backgroundColor = '#00006E';
+  marine.style.backgroundColor = '#6E6E6E';
+  marine.style.color = '#00006E';
+  text_menu.style.color = '#6E6E6E';
+  portfolio.style.backgroundColor = '#6E6E6E';
+  portfolio.style.color = '#00006E';
+  txt.style.backgroundColor = '#6E6E6E';
+  txt.style.color = '#00006E'
 
 
-<!-- CV -->
-<section> 
-    <img id="cv" src="assets/TOY BOX - CELSIUS.png" width="700">
-    </section>
+});
+
+hoverTargetcv.addEventListener('mouseleave', () => {
+    document.body.style.backgroundColor = '';
+  marine.style.backgroundColor = '';
+  marine.style.color = '';
+  text_menu.style.color = '';
+  portfolio.style.backgroundColor = '';
+  portfolio.style.color = '';
+  txt.style.backgroundColor = '';
+  txt.style.color = ''
+
+});   
 
 
+  const hoverTargettxt = document.getElementById('txt');
+
+hoverTargettxt.addEventListener('mouseenter', () => {
+  document.body.style.backgroundColor = '#00006E';
+  marine.style.backgroundColor = '#6E6E6E';
+  marine.style.color = '#00006E';
+  text_menu.style.color = '#6E6E6E';
+  portfolio.style.backgroundColor = '#6E6E6E';
+  portfolio.style.color = '#00006E';
+  CV.style.backgroundColor = '#6E6E6E';
+  CV.style.color = '#00006E'
 
 
+});
 
+hoverTargettxt.addEventListener('mouseleave', () => {
+    document.body.style.backgroundColor = '';
+  marine.style.backgroundColor = '';
+  marine.style.color = '';
+  text_menu.style.color = '';
+  portfolio.style.backgroundColor = '';
+  portfolio.style.color = '';
+  CV.style.backgroundColor = '';
+  CV.style.color = ''
+});
+  </script>
+</body>
+</html>
 
- <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <p>This is a Footer!</p>
-            <p>All Lefts reserved.</p>
-        </div>
-    </footer>

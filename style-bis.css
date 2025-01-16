@@ -6,114 +6,195 @@
   cursor: url(assets/1x/Artboard1.png), auto;
 }
 
+
 body{
   margin: 0;
   padding: 20px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Pixelify Sans';
   font-size: 16px;
-  color: #333333;
-  background-color: bisque;
+  background-color: #2100fb;
 }
 
-/* Header ----------------------------------------------------------------------------------------------*/ 
-
-/*-----title-----*/
-#Titre {
-  margin: auto;
-  font-size: xx-large;
-  color: var(--blanc);
+#marine{
+  font-size: 80px;
+  color: #2100fb;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
+#focus_layer {
+  display:none;
+  position: absolute;
+  width: 80vw;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 33;
+  left:-200px;
+  pointer-events: none;
+}
 
-
-/*-----barre du header-----*/
-nav{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 20;
-  overflow: hidden;
-  background-color: var(--bg-color);
+.side_bar {
+  transform: rotate(90deg);
+  transform-origin: left top;
+  height: 80vh;
+  width: 80vh; /* Ajout d'une largeur correspondant à la hauteur souhaitée */
+  float: left;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: fixed; /* Pour éviter les problèmes de débordement */
+  left: 20px; /* Pour ajuster la position depuis le bord gauche */
+  top: 20px; /* Pour ajuster la position depuis le haut */
   display: flex;
   align-items: center;
-  box-shadow: 0 0px 10px 12px var(--bg-color);
+  justify-content: center;
 }
 
-            /*------ pour faire en sorte que ça touche le bord -----*/
-body, header {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-
-/* switch------------*/
-
-#switch{
-    margin-top: 70px;
-    left: 50%;
+.side_bar, text {
+  color: #2100fb;
+  font-size: 6vh; /* Taille de police ajustée */
+  font-weight: bold;
+  white-space: nowrap; /* Empêche le texte de se wrapper */
+  text-align: center;
 }
 
-input[type=checkbox]{
-	height: 0;
-	width: 0;
-	visibility: hidden;
+#float-image{
+  width: 500px;
+  float: left;
+  margin: 30px
 }
 
-label {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 200px;
-	height: 100px;
-	background: var(--blanc);
-	display: block;
-	border-radius: 100px;
-	position: relative;
+#text_menu{
+  color: #FFFFFF;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
-label:after {
-	content: '';
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 90px;
-	height: 90px;
-	background: var(--bg-color);
-	border-radius: 90px;
-	transition: 0.3s;
+h2{
+  width: 500px;
 }
 
-input:checked + label {
-	background: var(--bg-color);
+.boutons {
+  display: flex; /* Les enfants sont alignés horizontalement */
+  justify-content: space-between; /* Ajoute un espace égal entre chaque élément */
+  gap: 10px; /* Espace de 40px entre chaque élément */
+
 }
 
-input:checked + label:after {
-	left: calc(100% - 5px);
-	transform: translateX(-100%);
-  background: var(--blanc);
-}
-
-label:active:after {
-	width: 130px;
+#portfolio {
+  color: #0400ff;
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  font-size: 50px;
+  z-index: 2;
 }
 
 
+#CV{
+  color: #0400ff;
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  font-size: 50px;
+}
+
+#txt{
+  color: #0400ff;
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  font-size: 50px;
+}
 
 
 
 
-/* Footer ----------------------------------------------------------------------------------------------*/
-footer {
-    width: 100%;
-    z-index: 19;
-    overflow: hidden;
-    background-color: var(--bg-color);
-  }
-    
-  .footer-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between ;
-    box-shadow: 0 0px 10px 12px var(--bg-color);
-  }
-    
+---------------------------------------Orga de la page .img (portfolio)----------------------------
+
+
+.container{
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.box{
+  width: auto;
+  padding:0px;
+  float: left;
+  margin: 10px;
+  position: relative;
+}
+
+.box img{
+  width:100%;
+  height: 100%;
+  height: 470px;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+
+.caption {
+  pointer-events: none;
+}
+
+.box:hover{
+  background-color:#020223 ;
+}
+
+#project_img.active{
+  position: fixed; /* Position absolue par rapport à l'écran */
+  top: 50%; /* Centre verticalement */
+  left: 50%; /* Centre horizontalement */
+}
+
+.box img:hover +.caption{
+  display: block;
+  color: #fefefe;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.box img:hover{
+  opacity: 0.3;
+}
+
+.box .caption{
+display : none;
+}
+
+---------------------------------------Orga des pages individuelles (portfolio)----------------------------
+
+.container_sing{
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.box_sing{
+  width: auto;
+  padding:0px;
+  float: left;
+  margin: 10px;
+  position: relative;
+}
+
+.box_sing img{
+  width:100%;
+  height: 100%;
+  height: 470px;
+  object-fit: contain;
+  transition: 0.3s;
+}
