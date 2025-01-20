@@ -16,6 +16,10 @@ body{
   transition: 0.3s;
 }
 
+.presentation_txt{
+
+}
+
 #marine{
   font-size: 80px;
   color: #2100fb;
@@ -23,7 +27,25 @@ body{
   border-radius: 20px;
   padding-left: 10px;
   padding-right: 10px;
-  transition: 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+#ultramarine{
+  visibility: hidden;
+  font-size: 80px;
+  border: #FFFFFF;
+  border-style: solid;
+  color: #ffffff;
+  background-color: #ffffff00;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: ease-in-out 0.3s;
+}
+
+#marine:hover + #ultramarine{
+  visibility: visible;
+  transition: ease-in-out 0.3s;
 }
 
 #focus_layer {
@@ -53,6 +75,7 @@ body{
   margin-left: 30px;
   transition: 0.3s;
 }
+
 
 h2{
   width: 500px;
@@ -155,6 +178,7 @@ display : none;
 }
 
 ---------------------------------------Orga des pages individuelles (portfolio)----------------------------
+
 
 ---------------------------------------Orga de page cv (resumee)----------------------------
 
