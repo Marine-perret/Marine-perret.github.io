@@ -13,6 +13,7 @@ body{
   font-family:'Pixelify Sans';
   font-size: 16px;
   background-color: #2100fb;
+  transition: 0.3s;
 }
 
 #marine{
@@ -22,6 +23,7 @@ body{
   border-radius: 20px;
   padding-left: 10px;
   padding-right: 10px;
+  transition: 0.3s;
 }
 
 #focus_layer {
@@ -35,33 +37,9 @@ body{
   z-index: 33;
   left:-200px;
   pointer-events: none;
+  transition: 0.3s;
 }
 
-.side_bar {
-  transform: rotate(90deg);
-  transform-origin: left top;
-  height: 80vh;
-  width: 80vh; /* Ajout d'une largeur correspondant à la hauteur souhaitée */
-  float: left;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  position: fixed; /* Pour éviter les problèmes de débordement */
-  left: 20px; /* Pour ajuster la position depuis le bord gauche */
-  top: 20px; /* Pour ajuster la position depuis le haut */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.side_bar, text {
-  color: #2100fb;
-  font-size: 6vh; /* Taille de police ajustée */
-  font-weight: bold;
-  white-space: nowrap; /* Empêche le texte de se wrapper */
-  text-align: center;
-}
 
 #float-image{
   width: 500px;
@@ -73,17 +51,19 @@ body{
   color: #FFFFFF;
   margin-right: 30px;
   margin-left: 30px;
+  transition: 0.3s;
 }
 
 h2{
   width: 500px;
+  transition: 0.3s;
 }
 
 .boutons {
   display: flex; /* Les enfants sont alignés horizontalement */
   justify-content: space-between; /* Ajoute un espace égal entre chaque élément */
   gap: 10px; /* Espace de 40px entre chaque élément */
-
+  transition: 0.3s;
 }
 
 #portfolio {
@@ -95,6 +75,7 @@ h2{
   text-decoration: none;
   font-size: 50px;
   z-index: 2;
+  transition: 0.3s;
 }
 
 
@@ -106,6 +87,7 @@ h2{
   padding-right: 20px;
   text-decoration: none;
   font-size: 50px;
+  transition: 0.3s;
 }
 
 #txt{
@@ -116,6 +98,7 @@ h2{
   padding-right: 20px;
   text-decoration: none;
   font-size: 50px;
+  transition: 0.3s;
 }
 
 
@@ -135,6 +118,7 @@ h2{
   float: left;
   margin: 10px;
   position: relative;
+  transition: 0.3s;
 }
 
 .box img{
@@ -145,7 +129,6 @@ h2{
   transition: 0.3s;
 }
 
-
 .caption {
   pointer-events: none;
 }
@@ -154,22 +137,17 @@ h2{
   background-color:#020223 ;
 }
 
-#project_img.active{
-  position: fixed; /* Position absolue par rapport à l'écran */
-  top: 50%; /* Centre verticalement */
-  left: 50%; /* Centre horizontalement */
-}
-
 .box img:hover +.caption{
   display: block;
+  text-align: left;
   color: #fefefe;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 30%;
+  left: 30%;
 }
 
 .box img:hover{
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .box .caption{
@@ -178,23 +156,121 @@ display : none;
 
 ---------------------------------------Orga des pages individuelles (portfolio)----------------------------
 
-.container_sing{
-  width: 1200px;
-  margin: 0px auto;
+---------------------------------------Orga de page cv (resumee)----------------------------
+
+
+#home{
+  width: 30px;
+  margin-left: 20px;
+  padding: 5px;
+  transition: 0.2s;
+  border-radius: 20%;
 }
 
-.box_sing{
-  width: auto;
-  padding:0px;
-  float: left;
-  margin: 10px;
-  position: relative;
+#home:hover{
+  background-color:#0502bc;
+  border-radius: 50%;
+  padding: 5px;
+  transition: 0.2s;
 }
 
-.box_sing img{
-  width:100%;
-  height: 100%;
-  height: 470px;
-  object-fit: contain;
-  transition: 0.3s;
+.cv{
+  height: 297px;
+  width: 210px;
+  background-color:#fefefe;
+}
+
+---------------------------------------Orga de la page .txt (contact)----------------------------
+
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+
+}
+
+input::placeholder, textarea::placeholder {
+  color: #ffffff;
+  font-family:'Pixelify Sans' ;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #0400ff;
+  font-size: 0.875em;
+}
+
+#form {
+  position: center;
+  width: 100vw;
+  margin: 50px;
+  display: flex; /* Active le modèle Flexbox */
+  flex-direction: column; /* Dispose les éléments en colonne */
+  gap: 0px;
+  
+
+}
+
+input {
+  font-family: 'Pixelify Sans';
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  
+  background: transparent;
+  outline: none;
+  color: #ffffff; /*couleur du text une fois tapé puis deselectionné*/
+  
+  border: solid 1px #ffffff;
+  border-bottom: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #ffffff;
+  color: #0400ff;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  background: transparent;
+  outline: none;
+  color: #ffffff; /* couleur du text une fois tapé puis deselectionné dans le message input*/
+  font-family: 'Pixelify Sans';
+  font-size: 0.875em;
+  border: solid 1px #ffffff;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #ffffff;
+  color: #0400ff;
+}
+
+#submit {
+  width: 502px;
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  font-family: 'Pixelify Sans';
+  font-size: 0.875em;
+  color: #ffffff;
+  outline:none;
+  cursor: pointer;
+  border: solid 1px #ffffff;
+  border-top: none;
+}
+
+#submit:hover {
+  color: #0400ff;
 }

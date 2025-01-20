@@ -12,10 +12,6 @@
 </head>
 <body> 
 
-    <div class="side_bar">
-        ULTRAMARINE
-    </div>
-
     <div class="dessin_menu"> 
         <img src="assets/1x/IMAGE DE MENU.png" id="float-image">
     </div>
@@ -23,6 +19,7 @@
     <div id="focus_layer">
         <img src="assets/Portfolio a la mano.png">
     </div>
+
 
 
     <div id="text_menu"> 
@@ -86,6 +83,7 @@ hoverTargetcv.addEventListener('mouseenter', () => {
   portfolio.style.color = '#00006E';
   txt.style.backgroundColor = '#6E6E6E';
   txt.style.color = '#00006E'
+  focus_layer2.style.display='block';
 
 
 });
@@ -99,6 +97,7 @@ hoverTargetcv.addEventListener('mouseleave', () => {
   portfolio.style.color = '';
   txt.style.backgroundColor = '';
   txt.style.color = ''
+  focus_layer2.style.display='';
 
 });   
 
@@ -114,6 +113,7 @@ hoverTargettxt.addEventListener('mouseenter', () => {
   portfolio.style.color = '#00006E';
   CV.style.backgroundColor = '#6E6E6E';
   CV.style.color = '#00006E'
+  focus_layer3.style.display='block';
 
 
 });
@@ -127,6 +127,7 @@ hoverTargettxt.addEventListener('mouseleave', () => {
   portfolio.style.color = '';
   CV.style.backgroundColor = '';
   CV.style.color = ''
+  focus_layer3.style.display='';
 });
   </script>
 </body>
